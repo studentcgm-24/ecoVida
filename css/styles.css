@@ -353,3 +353,21 @@
     .footer_index p strong {
         color: #ccc;
     }
+
+    .servicios_index{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .servicios_index h2 {
+        text-align: center;
+    } 
+
+    .link_servicios {
+        text-align: center;
+    }
+
+    .link {
+        align-items: center;
+        text-align: center;
+    }
