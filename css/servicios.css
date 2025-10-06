@@ -1,62 +1,194 @@
-@font-face {
-    font-family: 'ChangaOne';
-    src: url('../fonts/ChangaOne_Regular.ttf');
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: #242424;
-}
-body{
-    background-color: #d7f7d7;
-}
+    @font-face {
+        font-family: 'ChangaOne';
+        src: url('../fonts/ChangaOne_Regular.ttf');
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        color: #242424;
+    }
+    body{
+        background-color: #d7f7d7;
+    }
 
-header{
-    width: 100%;
-    height: 100%;
-    border-radius: 0 0 0% 0% / 0 0 100px 100px;
-    background-image: url('../img/img_headerNav.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow: hidden;
-}
+    header{
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 0% 0% / 0 0 100px 100px;
+        background-image: url('../img/img_headerNav.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
 
-.contenido_header{
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-}
+    .contenido_header{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+    }
 
-nav{
-    width: 100%;
-    height: 70px;
+    nav{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        box-shadow: #242424 0px 0px 30px -20px;
+    }
+
+    nav h2{
+        color: white;
+        font-family: 'ChangaOne', cursive;
+        font-size: 30px;
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    /**************************************************Sección Servicios ********************************************/
+    .servicios {
+    padding-top: 25px;
+    width: 75%;
+    margin-left: 180px;
+    }
+
+    .servicios h2 {
+    text-align: center;
+    font-size: 35px;
+    color: #08b300; /* Verde corporativo */
+    margin-bottom: 40px;
+    }
+
+    .parrafo_video_servicios {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        align-items: center;
+    }
+    .parrafo_video_servicios video{
+        height: 200px;
+    }
+
+    .parrafo_video_servicios p{
+        color: #0f0c0c;
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    /* Contenedor grid */
+    .services-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+
+    /* Tarjetas de servicio */
+    .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card h3 {
+    margin-bottom: 15px;
+    color: #2c662d;
+    font-size: 1.3em;
+    }
+
+    .service-card img {
+    max-width: 100%;
+    height: 260px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    }
+
+    .service-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #0f0c0c;
+    }
+
+    footer {
+    background-color: #1a352e;
+    border-top: 2px solid #1a352e;
+    align-items: center;
+    }
+
+    .footer_index {
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    box-shadow: #242424 0px 0px 30px -20px;
-}
+    }
 
-nav h2{
-    color: white;
-    font-family: 'ChangaOne', cursive;
-    font-size: 30px;
-}
+    .footer_index h3 {
+    margin-bottom: 15px;
+    color: #08b300; /* Verde corporativo, puedes cambiarlo */
+    font-size: 1.2em;
+    }
 
-nav ul{
-    display: flex;
+    .footer_index ul {
     list-style: none;
-    gap: 30px;
-}
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+    }
 
-nav ul li a{
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-}   
+    .footer_index ul li {
+    margin-bottom: 15px;
+    color: #ccc;
+    }
+
+    .certification {
+        margin-top: 5px;
+        width: auto;
+        height: 80px;
+        align-items: center;
+    }
+
+    .footer_index ul strong {
+        color: #ccc;
+    }
+
+    .footer_index p {
+    line-height: 1.6;
+    color: #ccc;
+    }
+    
+    .footer_index p strong {
+        color: #ccc;
+    }
+
+    .aliados{
+        width: 500px;
+        height: 80px;
+    }
