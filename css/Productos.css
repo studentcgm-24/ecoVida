@@ -1,0 +1,251 @@
+:root {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 0% 0% / 0 0 100px 100px;
+        background-image: url('../img/img_headerNav.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+
+    
+    .contenido_header{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+    }
+
+nav {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    nav h2 {
+        color: white;
+        font-family: 'ChangaOne', cursive;
+        font-size: 30px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+
+    nav ul li a { 
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+        position: relative;
+    }
+    
+    nav ul li a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background-color: #08b300;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover::before{
+        width: 100%;
+    }
+        
+        
+    body {
+      background: #d7f7d7;
+      color: #242424;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .productos {
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .titulo-productos {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #08b300;
+      font-weight: 700;
+      position: relative;
+    }
+
+    .titulo-productos::after {
+      content: "";
+      display: block;
+      width: 70%;
+      height: 3px;
+      background: #242424;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    .galeria-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      justify-items: center;
+    }
+
+    .producto {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 270px;
+      cursor: pointer;
+    }
+
+    .producto:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-bottom: 2px solid #d7f7d7;
+    }
+
+    .descripcion {
+      padding: 16px 14px;
+      background: rgb(255, 255, 255);
+      opacity: 0.9;
+      font-size: 0.95rem;
+      color: #242424;
+      text-align: left;
+    }
+
+    .pie {
+      background: #1a352e;
+      color: #ffffff;
+      text-align: center;
+      padding: 18px 10px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+      border-top: 3px solid #d7f7d7;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .encabezado {
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px 20px;
+      }
+
+      .titulo-principal {
+        font-size: 1.6rem;
+      }
+
+      .galeria-productos {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .producto img {
+        height: 170px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .titulo-productos {
+        font-size: 1.7rem;
+      }
+
+      .descripcion {
+        font-size: 0.88rem;
+      }
+    }
+    /* Banner sonido - desde aqui es la parte del sonido de fondo */
+    .banner-sonido {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("../img/fondo_de perfil.webp") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .banner-sonido .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(2px);
+    }
+
+    .banner-sonido h1 {
+      position: relative;
+      font-size: 2.4rem;
+      z-index: 2;
+      letter-spacing: 2px;
+      animation: aparecer 1.5s ease-out;
+    }
+
+    /* Botón sonido */
+    .activar-sonido {
+      position: relative;
+      z-index: 2;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid #d7f7d7;
+      color: #ffffff;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .activar-sonido:hover {
+      background: #d7f7d7;
+      color: #242424;
+      transform: scale(1.05);
+    }
+
+    /* Animación */
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+

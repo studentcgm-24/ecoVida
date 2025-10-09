@@ -37,9 +37,10 @@
         height: 60px;
         display: flex;
         justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
         align-items: center;
         padding: 0 50px;
-        box-shadow: #242424 0px 0px 30px -20px;
     }
 
     nav h2 {
